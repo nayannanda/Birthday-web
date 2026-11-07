@@ -1,0 +1,569 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff5fa;
+    color: #541c3d;
+    overflow-x: hidden;
+}
+
+:root {
+    --pink: #ff4f96;
+    --dark-pink: #b82e70;
+    --light-pink: #ffe1ee;
+    --purple: #4b1b49;
+}
+
+.navbar {
+    min-height: 75px;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.93);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 20px #e8a9c633;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--purple);
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #66334f;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+.music-btn, .main-btn {
+    border: none;
+    background: linear-gradient(135deg, #ff4f96, #c33783);
+    color: white;
+    padding: 12px 23px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+}
+
+.music-btn:hover, .main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #ff4f9666;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 610px;
+    padding: 70px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+    background:
+        linear-gradient(90deg, rgba(55,15,51,.93), rgba(100,30,80,.65)),
+        url('assets/photos/photo5.jpg') center/cover;
+    color: white;
+}
+
+.hero-content {
+    max-width: 570px;
+    z-index: 2;
+}
+
+.small-heading {
+    color: #ffafd0;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    font-family: 'Dancing Script', cursive;
+    color: #ff8fbd;
+}
+
+.hero-text {
+    margin: 25px 0;
+    color: #ffe5f0;
+    line-height: 1.9;
+}
+
+.hero-photo {
+    width: 340px;
+    height: 420px;
+    padding: 12px;
+    background: white;
+    border-radius: 12px;
+    transform: rotate(3deg);
+    box-shadow: 0 15px 45px #0005;
+    z-index: 2;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 88%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.photo-caption {
+    color: #843c61;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+}
+
+.hero-decoration {
+    position: absolute;
+    right: 42%;
+    bottom: 10%;
+    font-size: 110px;
+    color: #ff83b6;
+    opacity: .2;
+}
+
+/* COUNTDOWN */
+
+.countdown-section {
+    text-align: center;
+    padding: 60px 15px;
+    background: linear-gradient(135deg, #ffe2ed, #fff6fa);
+}
+
+.countdown-section h2,
+.section-heading h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: var(--dark-pink);
+}
+
+.countdown-section p {
+    margin: 12px;
+    color: #86526d;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    background: white;
+    min-width: 90px;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #e69cbd44;
+}
+
+.countdown strong {
+    display: block;
+    font-size: 28px;
+    color: var(--pink);
+}
+
+.countdown span {
+    font-size: 12px;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 80px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading > span {
+    color: var(--pink);
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.section-heading p {
+    margin-top: 10px;
+    color: #90617a;
+}
+
+/* MEMORIES */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.memory-card {
+    padding: 12px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #e5a4c344;
+    transition: .3s;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.memory-card p {
+    text-align: center;
+    padding: 15px 5px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: var(--dark-pink);
+}
+
+/* LOVE MESSAGE */
+
+.message-section {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #63234f, #a43c75);
+}
+
+.message-card {
+    background: #fff6fa;
+    padding: 55px 35px;
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px #0003;
+}
+
+.message-icon {
+    font-size: 45px;
+}
+
+.message-card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: var(--dark-pink);
+    margin: 15px 0;
+}
+
+.message-card p {
+    line-height: 2.1;
+    color: #76516a;
+}
+
+.message-card h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: var(--pink);
+    margin-top: 25px;
+}
+
+/* GALLERY */
+
+.gallery-section {
+    background: #fff0f6;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 7px solid white;
+    box-shadow: 0 7px 20px #d88eae55;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05) rotate(2deg);
+    z-index: 2;
+}
+
+/* SURPRISE */
+
+.surprise-section {
+    padding: 80px 15px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffdfeb, #f7d9fa);
+}
+
+.surprise-card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+    color: var(--dark-pink);
+}
+
+.surprise-card p {
+    margin: 15px 0 25px;
+}
+
+.gift {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+/* POPUP */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: #21091dcc;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 200;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-content {
+    max-width: 420px;
+    width: 100%;
+    background: #fff3f9;
+    padding: 45px 30px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    animation: popupIn .4s ease;
+}
+
+.popup-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    line-height: 1.9;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #a43c75;
+}
+
+.big-heart {
+    font-size: 45px;
+    margin-top: 20px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes popupIn {
+    from {transform: scale(.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+@keyframes heartbeat {
+    50% {transform: scale(1.25);}
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff4f96;
+    pointer-events: none;
+    animation: floatUp 7s linear forwards;
+    z-index: 50;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: #32152e;
+    color: white;
+    padding: 45px 15px;
+}
+
+footer h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: #ff8fbd;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #f5c8dd;
+}
+
+.footer-love {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 13px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+        overflow-x: auto;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .music-btn {
+        padding: 9px 15px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 7%;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-photo {
+        width: min(290px, 90%);
+        height: 350px;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .countdown div {
+        min-width: 70px;
+        padding: 13px 8px;
+    }
+
+    .countdown strong {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-card img {
+        height: 330px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery img {
+        height: 210px;
+        border-width: 4px;
+    }
+
+    .message-section {
+        padding: 55px 6%;
+    }
+
+    .message-card {
+        padding: 35px 20px;
+    }
+
+    .message-card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px) {
+    .gallery img {
+        height: 165px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+}
